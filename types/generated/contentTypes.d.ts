@@ -592,6 +592,7 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
     singularName: 'experience';
     pluralName: 'experiences';
     displayName: 'experience';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -645,14 +646,20 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<'2021-09-14'>;
     end_date: Schema.Attribute.Date &
-      Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+      }>;
+    is_current_job: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
       }> &
-      Schema.Attribute.DefaultTo<'2024-08-09'>;
+      Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

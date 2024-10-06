@@ -4,7 +4,8 @@
   "info": {
     "singularName": "experience",
     "pluralName": "experiences",
-    "displayName": "experience"
+    "displayName": "experience",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -67,9 +68,18 @@
         }
       },
       "type": "date",
-      "required": true,
-      "unique": true,
-      "default": "2024-08-09"
+      "required": false,
+      "unique": true
+    },
+    "is_current_job": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
