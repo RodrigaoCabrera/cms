@@ -743,6 +743,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'Project';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -784,7 +785,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         maxLength: 300;
       }>;
     type: Schema.Attribute.Enumeration<
-      ['Web app', 'Website', 'Store', 'Mobile app']
+      ['Web app', 'Website', 'Store', 'Mobile app', 'Web app AI']
     > &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

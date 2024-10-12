@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,17 +17,17 @@
   },
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "title": {
       "pluginOptions": {
@@ -62,7 +63,8 @@
         "Web app",
         "Website",
         "Store",
-        "Mobile app"
+        "Mobile app",
+        "Web app AI"
       ],
       "required": true
     },
